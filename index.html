@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lord Realty | Commercial Real Estate</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+
+  <!-- Single consistent typeface (free, Canela-adjacent) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111111;
+      --muted:#606060;
+      --hairline:#111111;
+      --maxw:760px;
+
+      /* one family only */
+      --primary: "Cormorant Garamond", ui-serif, Georgia, serif;
+    }
+
+    *{ box-sizing:border-box; }
+
+    html, body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:var(--primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* subtle center spine */
+    body::before{
+      content:"";
+      position:fixed;
+      top:0;
+      bottom:0;
+      left:50%;
+      width:0.5px;
+      background:var(--hairline);
+      opacity:0.75;
+      transform:translateX(-0.25px);
+      z-index:-1;
+    }
+
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .page{
+      height:100%;
+      width:100%;
+      max-width:var(--maxw);
+      padding:34px 24px 26px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+      position:relative;
+      z-index:1;
+    }
+
+    .top{
+      width:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      padding-top:6px;
+    }
+
+    .logo{
+      width:240px;
+      height:auto;
+      display:block;
+    }
+
+    .tag{
+      margin: 2px 0 0;
+      font-size: 13px;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #4a4a4a;
+      text-align:center;
+    }
+
+    .rule{
+      width: 120px;
+      height: 0.5px;
+      background: var(--hairline);
+      opacity: 0.55;
+    }
+
+    .card{
+      width:100%;
+      background:var(--bg);
+      padding:10px 0 0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .minimal{
+      width:100%;
+      max-width:660px;
+      margin:0 auto;
+      text-align:center;
+      font-size:15px;
+      line-height:1.75;
+      color:var(--fg);
+      font-weight: 400;
+    }
+
+    footer{
+      width:100%;
+      text-align:center;
+      padding-bottom:22px;
+      background:var(--bg);
+    }
+
+    .footer-address{
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:0.12em;
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    .footer-line{
+      font-size:11px;
+      color:var(--muted);
+      letter-spacing:0.12em;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:6px;
+    }
+
+    .footer-line a{
+      color:inherit;
+      text-decoration:none;
+      border-bottom:1px solid transparent;
+      padding-bottom:1px;
+    }
+
+    .footer-line a:hover{
+      color:var(--fg);
+      border-bottom-color:var(--fg);
+    }
+
+    .sep{
+      opacity:0.4;
+    }
+
+    .biz{
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      font-size:10.5px;
+      color:var(--fg);
+      font-weight:500;
+    }
+
+    /* small screens */
+    @media (max-height: 720px){
+      .page{ padding-top:22px; }
+      footer{ padding-bottom:10px; }
+      .minimal{ line-height:1.6; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div></div>
+
+    <div class="top">
+      <img src="logo.png" alt="Lord Realty" class="logo" />
+
+      <p class="tag">Industrial Real Estate</p>
+
+      <div class="rule"></div>
+
+      <div class="card">
+        <p class="minimal">
+          Based in Denver, Colorado, Lord Realty is a privately held real estate investment and development firm focused on industrial assets across the Midwest. The firm pursues selective opportunities with an emphasis on disciplined execution and long-term value.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-address">
+        3200 E Cherry Creek South Drive, Ste 480 · Denver, CO 80209
+      </div>
+
+      <div class="footer-line">
+        <span class="biz">Lord Realty Company, LLC.</span>
+        <span class="sep">·</span>
+        <span><a href="mailto:info@lordrealtyco.com">info@lordrealtyco.com</a></span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+
